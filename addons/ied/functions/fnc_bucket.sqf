@@ -111,8 +111,8 @@ if (!isServer) exitWith {};
         // Position                 VectorDirAndUp                  Description
         [[0.036,-0.049,-0.028], [[0,-1,0.009], [0,0.009,1]]],   // 1 wire
         [[0.014,-0.043,-0.152], [[1,-0.005,0], [-0.005,-1,0.001]]],// 2 wire
-        [[-0.07,-0.037,-0.053], [[-1,0,0], [0,0,1]]],           // 3 wire  
-        [[-0.035,-0.04,-0.078], [[0.117,-0.993,0], [0,0,1]]],   // 4 wire                     
+        [[-0.07,-0.037,-0.053], [[-1,0,0], [0,0,1]]],           // 3 wire
+        [[-0.035,-0.04,-0.078], [[0.117,-0.993,0], [0,0,1]]],   // 4 wire
         [[-0.054,-0.062,-0.071], [[-0.092,-0.986,0], [0,0,1]]], // 5 wire
         [[-0.033,-0.061,-0.073], [[-0.169,-0.986,0], [0,0,1]]], // 6 (long)
         [[0.009,-0.068,-0.188], [[0,-1,-0.019], [1,0,0.12]]]    // 7 (long)
@@ -126,6 +126,7 @@ if (!isServer) exitWith {};
 
     _bombObj setVariable [QGVAR(wires), _wires, true];
     _bombObj setVariable [QGVAR(bomb), true, true];
+    _bombObj setVariable [QGVAR(variation), _variation, true];
     _bombObj setVariable [QGVAR(lid), [_nonEOD,_isEOD], true];
     if (_variation in [1,2,3]) then {
         _bombObj setVariable [QGVAR(movable),true];

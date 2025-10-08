@@ -121,6 +121,7 @@ if (!isServer) exitWith {};
 
     _bombObj setVariable [QGVAR(wires),_wires,true];
     _bombObj setVariable [QGVAR(bomb),true, true];
+    _bombObj setVariable [QGVAR(variation), _variation, true];
 
     if (_isTimer) then {
         private _watch = createSimpleObject ["a3\Weapons_F\Ammo\mag_watch.p3d",[0,0,0]];
