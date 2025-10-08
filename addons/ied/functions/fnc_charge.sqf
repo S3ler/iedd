@@ -124,9 +124,9 @@ if (!isServer) exitWith {TRACE_1("ExitWith isServer:",isServer)};
                 if (_isLocal) then {
                     [QGVAR(addLocal), [_entity], _entity] call CBA_fnc_targetEvent;
                 } else {
-                    private _killedEhId = _unit getVariable [QGVAR(KilledEhId), -1];
+                    private _killedEhId = _entity getVariable [QGVAR(KilledEhId), -1];
                     if (_killedEhId != -1) then {
-                        _unit removeEventHandler ["Killed", _killedEhId];
+                        _entity removeEventHandler ["Killed", _killedEhId];
                     };
                 };
             }];

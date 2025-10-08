@@ -35,7 +35,7 @@ if (!isServer) exitWith {};
     };
 
     if (_isFake > random 1) exitWith {
-        private _type = getText (configFile >> "CfgVehicles" >> typeOf _bombObj >> "iedd_ied_default");
+        private _type = getText (configOf _bombObj >> "iedd_ied_default");
         private _dir = getDir _bombObj;
         private _vectorDir = vectorDir _bombObj;
         private _vectorUp = vectorUp _bombObj;

@@ -23,7 +23,13 @@ _bombObj setVariable [QGVAR(bomb),false,true];
 private _isTraining = _bombObj getVariable [QGVAR(training), false];
 if (_isTraining) then {
     private _type = IEDD_TRAINING_BOMB;
-    private _pos = _bombObj modelToWorld [0,0,0];
+    //private _pos = _bombObj modelToWorld [0,0,0];
+    private _aslPos = getPosASL _bombObj;
+    private _ground = getPosATL _bombObj;
+    private _aglPos = ASLToAGL _aslPos;
+    private _oldPos = _bombObj modelToWorld [0,0,0];
+    private _pos = _bombObj modelToWorldWorld [0,0,0];
+    diag_log format ["Training bomb triggered at %1, oldWayPos %2, aslPos %3, aglPos %4, ground %5",_pos, _oldPos, _aslPos, _aglPos, _ground];
     [
         {
             params ["_bombObj","",""];
@@ -66,7 +72,13 @@ if (_isTraining) then {
         };
     } else {
         private _typeOf = typeOf _bombObj;
-        private _pos = getPosATL _bombObj;
+        //private _pos = getPosATL _bombObj;
+        private _aslPos = getPosASL _bombObj;
+        private _ground = getPosATL _bombObj;
+        private _aglPos = ASLToAGL _aslPos;
+        private _oldPos = _bombObj modelToWorld [0,0,0];
+        private _pos = _bombObj modelToWorldWorld [0,0,0];
+        diag_log format ["REAL bomb triggered at %1, oldWayPos %2, aslPos %3, aglPos %4, ground %5",_pos, _oldPos, _aslPos, _aglPos, _ground];
         if (_typeOf != QEGVAR(vbied,box)) then {
             _pos set [2, 0.05];
         };
