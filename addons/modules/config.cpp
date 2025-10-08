@@ -12,7 +12,6 @@ class CfgPatches {
 		requiredAddons[] = {
             "A3_Modules_F",
             "A3_Modules_F_Curator",
-			"ace_zeus",
             "iedd_main",
             "iedd_vbied"
         };

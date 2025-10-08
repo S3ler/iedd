@@ -7,7 +7,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cba_main","ace_common"};
+        requiredAddons[] = {"cba_main","ace_main"};
         url = "https://community.bistudio.com/wiki";
         VERSION_CONFIG;
     };
