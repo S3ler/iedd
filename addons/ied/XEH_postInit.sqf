@@ -136,6 +136,16 @@
     call FUNC(suicide);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(training), {
+	params ["_type","_pos","_variation","_dir","_vectorDirAndUp"];
+    TRACE_1("New Training IEDD Data:",_this);
+    private _bombObj = createVehicle [_type, _pos, [], 0, "CAN_COLLIDE"];
+    _bombObj setVariable [QGVAR(variation), _variation];
+    _bombObj setDir _dir;
+    _bombObj setVectorDirAndUp _vectorDirAndUp;
+    _bombObj setPosATL _pos;
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
 
     [{

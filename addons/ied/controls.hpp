@@ -1,10 +1,7 @@
 class Default; //Empty template with pre-defined width and single line height
 class Title: Default
 {
-    class Controls
-    {
-        class Title;
-    };
+    class Controls;
 };
 class Checkbox: Title
 {
@@ -127,7 +124,7 @@ class GVAR(isCharge): CheckboxState {
         class Title: Title{};
         class Value: Value
         {
-            onCheckedChanged = QUOTE(call FUNC(onChargeChanged));   
+            onCheckedChanged = QUOTE(call FUNC(onChargeChanged));
         };
     };
 };

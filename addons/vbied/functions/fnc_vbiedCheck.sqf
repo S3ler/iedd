@@ -30,7 +30,7 @@ if (GVAR(bombs) isNotEqualTo []) then {
         TRACE_3("VBIED",_distance,_move,_veh);
         if (_move) then {
             private _speed = _object getVariable [QGVAR(speed),GVAR(defaultSpeed)];
-            private _vehSpeed = speed _vehicle;
+            private _vehSpeed = speed _veh;
             if (_vehSpeed > _speed || _vehSpeed < -_speed) then {
                 TRACE_1("Vbied Speed",_speed);
                 [QEGVAR(ied,explosion), [_object]] call CBA_fnc_serverEvent;

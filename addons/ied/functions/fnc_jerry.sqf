@@ -35,7 +35,7 @@ if (!isServer) exitWith {};
     };
 
     if (_isFake > random 1) exitWith {
-        private _type = getText (configFile >> "CfgVehicles" >> typeOf _bombObj >> "iedd_ied_default");
+        private _type = getText (configOf _bombObj >> "iedd_ied_default");
         private _dir = getDir _bombObj;
         private _vectorDir = vectorDir _bombObj;
         private _vectorUp = vectorUp _bombObj;
@@ -129,6 +129,7 @@ if (!isServer) exitWith {};
 
     _bombObj setVariable [QGVAR(wires), _wires,true];
     _bombObj setVariable [QGVAR(bomb), true, true];
+    _bombObj setVariable [QGVAR(variation), _variation, true];
 
     if (_isTimer) then {
         private _watch = createSimpleObject ["a3\Weapons_F\Ammo\mag_watch.p3d",[0,0,0]];

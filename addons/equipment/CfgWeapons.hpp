@@ -1,7 +1,7 @@
 class CfgWeapons {
-    class ACE_ItemCore;
+    class CBA_MiscItem;
     class CBA_MiscItem_ItemInfo;
-    class iedd_item_notebook: ACE_ItemCore {
+    class iedd_item_notebook: CBA_MiscItem {
         author = "prisoner";
         displayName = ECSTRING(main,Category_Main); //Item's Display Name
         picture = QPATHTOEF(models,preview\notebook.paa); //Displays icon in your Inventory
