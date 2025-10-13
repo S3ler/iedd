@@ -1,22 +1,18 @@
 class Logic;
-    class Module_F: Logic
+class Module_F: Logic
+{
+    // class ArgumentsBaseUnits
+    // {
+    //     class Units;
+    // };
+    class ModuleDescription;
+    class AttributesBase
     {
-        class ArgumentsBaseUnits
-        {
-            class Units;
-        };
-        class ModuleDescription;
-        class AttributesBase
-        {
-            class Default;
-            class Edit;
-            class Combo;
-            class Checkbox;
-            class CheckboxNumber;
-            class ModuleDescription;
-            class Units;
-        };
+        class Default;
+        class Combo;
+        class Checkbox;
     };
+};
 
 class GVAR(multi): Module_F {
     is3DEN = 1;

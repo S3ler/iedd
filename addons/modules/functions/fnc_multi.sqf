@@ -102,7 +102,7 @@ switch _mode do {
             private _roadPos = [0,0,0];
             private _decalType = "";
             if (_iedCount > 0) then {
-                if (count _iedTypes == 0) exitWith {
+                if (_iedTypes isEqualTo []) exitWith {
                     ["None of types selected from IEDs, %1",str(_logic)] call BIS_fnc_error;
                 };
                 private _timerValue = _logic getVariable [QGVAR(timer), EGVAR(ied,defaultTimer)];

@@ -199,7 +199,7 @@ class GVAR(display) {
         };
 
         class GVAR(charge): RscActiveText {
-            idc = NOTEBOOK_IDC_CHARGE ;
+            idc = NOTEBOOK_IDC_CHARGE;
             style = 48;
             text = QPATHTOF(images\brside\7.paa);
             tooltip = CSTRING(Charge);

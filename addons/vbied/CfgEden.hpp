@@ -6,10 +6,7 @@
 #define CTRL_H(H) H * 4.5 * GRID_H
 #define CTRL_DEFAULT_H (SIZE_M * GRID_H)
 #define EDIT_W 3.3
-class ctrlCheckbox;
-class ctrlControlsGroup;
-class ctrlStatic;
-class ctrlEdit;
+
 class ctrlCombo;
 class ctrlButton;
 

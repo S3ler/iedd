@@ -66,9 +66,9 @@ if (_isTraining) then {
         };
     } else {
         private _typeOf = typeOf _bombObj;
-        private _pos = getPosATL _bombObj;
+        private _pos = _bombObj modelToWorld [0,0,0];
         if (_typeOf != QEGVAR(vbied,box)) then {
-            _pos set [2, 0.05];
+            _pos vectorAdd [0,0,0.05];
         };
         private _size = _bombObj getVariable [QGVAR(size), GVAR(defaultSize)];
         private _unit = objNull;
